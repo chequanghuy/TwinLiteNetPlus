@@ -1,3 +1,5 @@
+from argparse import Namespace
+
 import torch
 import torch.nn as nn
 import numpy as np
@@ -8,6 +10,8 @@ import matplotlib.pyplot as plt
 from torch.nn import Module, Conv2d, Parameter, Softmax
 import cv2
 import os
+
+from huggingface_hub import PyTorchModelHubMixin
 
 
 
@@ -440,7 +444,17 @@ class UpConvBlock(nn.Module):
         x = self.conv2(x)
         return x
 
-class TwinLiteNetPlus(nn.Module):
+class TwinLiteNetPlus(nn.Module,
+                      PyTorchModelHubMixin,
+                      repo_url="https://github.com/chequanghuy/TwinLiteNetPlus.git",
+                      pipeline_tag="image-segmentation",
+                      license="mit",
+                      coders={
+                            Namespace : (
+                                lambda x: vars(x),
+                                lambda data: Namespace(**data),
+                            )
+    }):
     '''
     This class defines the ESPNet network
     '''
