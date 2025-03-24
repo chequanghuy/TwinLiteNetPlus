@@ -459,7 +459,7 @@ class TwinLiteNetPlus(nn.Module,
     This class defines the ESPNet network
     '''
 
-    def __init__(self, args=None):
+    def __init__(self, args: Namespace = None):
 
         super().__init__()
         chanel_img = cfg.chanel_img
