@@ -17,9 +17,7 @@
 
 ## 📢 Publication
 
-We are pleased to announce that our paper has been **accepted for publication** in the journal *Computers and Electrical Engineering* (Elsevier). 
-The final version will be available soon.
-
+We are pleased to announce that our paper has been **accepted for publication** in the journal *Computers and Electrical Engineering* (Elsevier).
 
 <details>
   <summary>
