@@ -113,13 +113,13 @@ Update the your dataset path in the `./BDD100K.py`.
 ### Multi-task
 
 ```shell
-python train.py --config '{nano/small/medium/large}'
+python train.py --ema --config '{nano/small/medium/large}'
 ```
 
 ### Single-task
 
 ```shell
-python train_singletask.py --config '{nano/small/medium/large}' --task '{"DA"/"LL"}'  # DA for drivable area, LL for lane line 
+python train_singletask.py --ema --config '{nano/small/medium/large}' --task '{"DA"/"LL"}'  # DA for drivable area, LL for lane line 
 ```
 
 ## Evaluation
